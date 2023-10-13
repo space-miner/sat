@@ -1,0 +1,6 @@
+(executable
+ (public_name sat)
+ (name main)
+ (libraries sat base stdio)
+ (preprocess
+  (pps ppx_jane ppx_sexp_conv)))

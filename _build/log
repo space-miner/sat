@@ -1,0 +1,164 @@
+# dune exec ./bin/main.exe
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/tsuy/Projects/sat
+# Auto-detected concurrency: 8
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_332d9e_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; ocaml_bin = External "/usr/bin"
+#  ; ocaml = Ok External "/usr/bin/ocaml"
+#  ; ocamlc = External "/usr/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/usr/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/usr/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/usr/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/tsuy/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/tsuy/Projects/sat"
+#        ; "INSIDE_DUNE" : "/home/tsuy/Projects/sat/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/tsuy/Projects/sat/_build/install/default/lib"
+#        ; "OCAMLPATH" : "/home/tsuy/Projects/sat/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/tsuy/Projects/sat/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/tsuy/.opam/default/lib" ]
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.13.1"
+#      ; standard_library_default = "/usr/lib/ocaml"
+#      ; standard_library = "/usr/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "x86_64-linux-gnu-gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ]
+#      ; ocamlc_cppflags =
+#          [ "-D_FILE_OFFSET_BITS=64"; "-Wdate-time"; "-D_FORTIFY_SOURCE=2" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ]
+#      ; ocamlopt_cppflags =
+#          [ "-D_FILE_OFFSET_BITS=64"; "-Wdate-time"; "-D_FORTIFY_SOURCE=2" ]
+#      ; bytecomp_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-Wdate-time"
+#          ; "-D_FORTIFY_SOURCE=2"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-Wdate-time"
+#          ; "-D_FORTIFY_SOURCE=2"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "x86_64-linux-gnu-ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "x86_64-linux-gnu-as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X030"
+#      ; cmi_magic_number = "Caml1999I030"
+#      ; cmo_magic_number = "Caml1999O030"
+#      ; cma_magic_number = "Caml1999A030"
+#      ; cmx_magic_number = "Caml1999Y030"
+#      ; cmxa_magic_number = "Caml1999Z030"
+#      ; ast_impl_magic_number = "Caml1999M030"
+#      ; ast_intf_magic_number = "Caml1999N030"
+#      ; cmxs_magic_number = "Caml1999D030"
+#      ; cmt_magic_number = "Caml1999T030"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I lib/.sat.objs/byte -no-alias-deps -opaque -o lib/.sat.objs/byte/sat.cmo -c -impl lib/sat.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /home/tsuy/.opam/default/lib/base -I /home/tsuy/.opam/default/lib/base/base_internalhash_types -I /home/tsuy/.opam/default/lib/base/caml -I /home/tsuy/.opam/default/lib/base/md5 -I /home/tsuy/.opam/default/lib/base/shadow_stdlib -I /home/tsuy/.opam/default/lib/base_quickcheck -I /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck/runtime -I /home/tsuy/.opam/default/lib/bin_prot -I /home/tsuy/.opam/default/lib/bin_prot/shape -I /home/tsuy/.opam/default/lib/fieldslib -I /home/tsuy/.opam/default/lib/jane-street-headers -I /home/tsuy/.opam/default/lib/parsexp -I /home/tsuy/.opam/default/lib/ppx_assert/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_bench/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_compare/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_expect/collector -I /home/tsuy/.opam/default/lib/ppx_expect/common -I /home/tsuy/.opam/default/lib/ppx_expect/config -I /home/tsuy/.opam/default/lib/ppx_expect/config_types -I /home/tsuy/.opam/default/lib/ppx_hash/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_here/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_inline_test/config -I /home/tsuy/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_log/types -I /home/tsuy/.opam/default/lib/ppx_module_timer/runtime -I /home/tsuy/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/tsuy/.opam/default/lib/sexplib -I /home/tsuy/.opam/default/lib/sexplib0 -I /home/tsuy/.opam/default/lib/splittable_random -I /home/tsuy/.opam/default/lib/stdio -I /home/tsuy/.opam/default/lib/time_now -I /home/tsuy/.opam/default/lib/typerep -I /home/tsuy/.opam/default/lib/variantslib -I lib/.sat.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.pp.mli)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I lib/.sat.objs/byte -I lib/.sat.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o lib/.sat.objs/native/sat.cmx -c -impl lib/sat.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlc.opt -g -w -24 -I .ppx/e9cc17709820d9c10c49ada875fb121c -I /home/tsuy/.opam/default/lib/base -I /home/tsuy/.opam/default/lib/base/base_internalhash_types -I /home/tsuy/.opam/default/lib/base/caml -I /home/tsuy/.opam/default/lib/base/shadow_stdlib -I /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck -I /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck/expander -I /home/tsuy/.opam/default/lib/ocaml-compiler-libs/common -I /home/tsuy/.opam/default/lib/ocaml-compiler-libs/shadow -I /home/tsuy/.opam/default/lib/ppx_assert -I /home/tsuy/.opam/default/lib/ppx_base -I /home/tsuy/.opam/default/lib/ppx_bench -I /home/tsuy/.opam/default/lib/ppx_bin_prot -I /home/tsuy/.opam/default/lib/ppx_bin_prot/shape-expander -I /home/tsuy/.opam/default/lib/ppx_cold -I /home/tsuy/.opam/default/lib/ppx_compare -I /home/tsuy/.opam/default/lib/ppx_compare/expander -I /home/tsuy/.opam/default/lib/ppx_compare/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_custom_printf -I /home/tsuy/.opam/default/lib/ppx_derivers -I /home/tsuy/.opam/default/lib/ppx_disable_unused_warnings -I /home/tsuy/.opam/default/lib/ppx_enumerate -I /home/tsuy/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_expect -I /home/tsuy/.opam/default/lib/ppx_expect/common -I /home/tsuy/.opam/default/lib/ppx_expect/payload -I /home/tsuy/.opam/default/lib/ppx_fields_conv -I /home/tsuy/.opam/default/lib/ppx_fixed_literal -I /home/tsuy/.opam/default/lib/ppx_hash -I /home/tsuy/.opam/default/lib/ppx_hash/expander -I /home/tsuy/.opam/default/lib/ppx_hash/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_here -I /home/tsuy/.opam/default/lib/ppx_here/expander -I /home/tsuy/.opam/default/lib/ppx_ignore_instrumentation -I /home/tsuy/.opam/default/lib/ppx_inline_test -I /home/tsuy/.opam/default/lib/ppx_inline_test/libname -I /home/tsuy/.opam/default/lib/ppx_jane -I /home/tsuy/.opam/default/lib/ppx_jane/kernel -I /home/tsuy/.opam/default/lib/ppx_let -I /home/tsuy/.opam/default/lib/ppx_let/expander -I /home/tsuy/.opam/default/lib/ppx_log -I /home/tsuy/.opam/default/lib/ppx_log/kernel -I /home/tsuy/.opam/default/lib/ppx_module_timer -I /home/tsuy/.opam/default/lib/ppx_optcomp -I /home/tsuy/.opam/default/lib/ppx_optional -I /home/tsuy/.opam/default/lib/ppx_pipebang -I /home/tsuy/.opam/default/lib/ppx_sexp_conv -I /home/tsuy/.opam/default/lib/ppx_sexp_conv/expander -I /home/tsuy/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_sexp_message -I /home/tsuy/.opam/default/lib/ppx_sexp_message/expander -I /home/tsuy/.opam/default/lib/ppx_sexp_value -I /home/tsuy/.opam/default/lib/ppx_stable -I /home/tsuy/.opam/default/lib/ppx_string -I /home/tsuy/.opam/default/lib/ppx_typerep_conv -I /home/tsuy/.opam/default/lib/ppx_variants_conv -I /home/tsuy/.opam/default/lib/ppxlib -I /home/tsuy/.opam/default/lib/ppxlib/ast -I /home/tsuy/.opam/default/lib/ppxlib/astlib -I /home/tsuy/.opam/default/lib/ppxlib/metaquot_lifters -I /home/tsuy/.opam/default/lib/ppxlib/print_diff -I /home/tsuy/.opam/default/lib/ppxlib/stdppx -I /home/tsuy/.opam/default/lib/ppxlib/traverse_builtins -I /home/tsuy/.opam/default/lib/sexplib0 -I /home/tsuy/.opam/default/lib/stdio -I /home/tsuy/.opam/default/lib/stdlib-shims -I /usr/lib/ocaml/compiler-libs -no-alias-deps -o .ppx/e9cc17709820d9c10c49ada875fb121c/dune__exe___ppx.cmo -c -impl .ppx/e9cc17709820d9c10c49ada875fb121c/_ppx.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/sat.cmxa lib/.sat.objs/native/sat.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -g -w -24 -I .ppx/e9cc17709820d9c10c49ada875fb121c -I /home/tsuy/.opam/default/lib/base -I /home/tsuy/.opam/default/lib/base/base_internalhash_types -I /home/tsuy/.opam/default/lib/base/caml -I /home/tsuy/.opam/default/lib/base/shadow_stdlib -I /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck -I /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck/expander -I /home/tsuy/.opam/default/lib/ocaml-compiler-libs/common -I /home/tsuy/.opam/default/lib/ocaml-compiler-libs/shadow -I /home/tsuy/.opam/default/lib/ppx_assert -I /home/tsuy/.opam/default/lib/ppx_base -I /home/tsuy/.opam/default/lib/ppx_bench -I /home/tsuy/.opam/default/lib/ppx_bin_prot -I /home/tsuy/.opam/default/lib/ppx_bin_prot/shape-expander -I /home/tsuy/.opam/default/lib/ppx_cold -I /home/tsuy/.opam/default/lib/ppx_compare -I /home/tsuy/.opam/default/lib/ppx_compare/expander -I /home/tsuy/.opam/default/lib/ppx_compare/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_custom_printf -I /home/tsuy/.opam/default/lib/ppx_derivers -I /home/tsuy/.opam/default/lib/ppx_disable_unused_warnings -I /home/tsuy/.opam/default/lib/ppx_enumerate -I /home/tsuy/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_expect -I /home/tsuy/.opam/default/lib/ppx_expect/common -I /home/tsuy/.opam/default/lib/ppx_expect/payload -I /home/tsuy/.opam/default/lib/ppx_fields_conv -I /home/tsuy/.opam/default/lib/ppx_fixed_literal -I /home/tsuy/.opam/default/lib/ppx_hash -I /home/tsuy/.opam/default/lib/ppx_hash/expander -I /home/tsuy/.opam/default/lib/ppx_hash/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_here -I /home/tsuy/.opam/default/lib/ppx_here/expander -I /home/tsuy/.opam/default/lib/ppx_ignore_instrumentation -I /home/tsuy/.opam/default/lib/ppx_inline_test -I /home/tsuy/.opam/default/lib/ppx_inline_test/libname -I /home/tsuy/.opam/default/lib/ppx_jane -I /home/tsuy/.opam/default/lib/ppx_jane/kernel -I /home/tsuy/.opam/default/lib/ppx_let -I /home/tsuy/.opam/default/lib/ppx_let/expander -I /home/tsuy/.opam/default/lib/ppx_log -I /home/tsuy/.opam/default/lib/ppx_log/kernel -I /home/tsuy/.opam/default/lib/ppx_module_timer -I /home/tsuy/.opam/default/lib/ppx_optcomp -I /home/tsuy/.opam/default/lib/ppx_optional -I /home/tsuy/.opam/default/lib/ppx_pipebang -I /home/tsuy/.opam/default/lib/ppx_sexp_conv -I /home/tsuy/.opam/default/lib/ppx_sexp_conv/expander -I /home/tsuy/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_sexp_message -I /home/tsuy/.opam/default/lib/ppx_sexp_message/expander -I /home/tsuy/.opam/default/lib/ppx_sexp_value -I /home/tsuy/.opam/default/lib/ppx_stable -I /home/tsuy/.opam/default/lib/ppx_string -I /home/tsuy/.opam/default/lib/ppx_typerep_conv -I /home/tsuy/.opam/default/lib/ppx_variants_conv -I /home/tsuy/.opam/default/lib/ppxlib -I /home/tsuy/.opam/default/lib/ppxlib/ast -I /home/tsuy/.opam/default/lib/ppxlib/astlib -I /home/tsuy/.opam/default/lib/ppxlib/metaquot_lifters -I /home/tsuy/.opam/default/lib/ppxlib/print_diff -I /home/tsuy/.opam/default/lib/ppxlib/stdppx -I /home/tsuy/.opam/default/lib/ppxlib/traverse_builtins -I /home/tsuy/.opam/default/lib/sexplib0 -I /home/tsuy/.opam/default/lib/stdio -I /home/tsuy/.opam/default/lib/stdlib-shims -I /usr/lib/ocaml/compiler-libs -intf-suffix .ml-gen -no-alias-deps -o .ppx/e9cc17709820d9c10c49ada875fb121c/dune__exe___ppx.cmx -c -impl .ppx/e9cc17709820d9c10c49ada875fb121c/_ppx.ml-gen)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -g -w -24 -o .ppx/e9cc17709820d9c10c49ada875fb121c/ppx.exe /usr/lib/ocaml/compiler-libs/ocamlcommon.cmxa /home/tsuy/.opam/default/lib/ocaml-compiler-libs/common/ocaml_common.cmxa /home/tsuy/.opam/default/lib/ppxlib/astlib/astlib.cmxa /home/tsuy/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /home/tsuy/.opam/default/lib/ppxlib/ast/ppxlib_ast.cmxa /home/tsuy/.opam/default/lib/ocaml-compiler-libs/shadow/ocaml_shadow.cmxa /home/tsuy/.opam/default/lib/ppxlib/print_diff/ppxlib_print_diff.cmxa /home/tsuy/.opam/default/lib/ppx_derivers/ppx_derivers.cmxa /home/tsuy/.opam/default/lib/ppxlib/traverse_builtins/ppxlib_traverse_builtins.cmxa /home/tsuy/.opam/default/lib/sexplib0/sexplib0.cmxa /home/tsuy/.opam/default/lib/ppxlib/stdppx/stdppx.cmxa /home/tsuy/.opam/default/lib/ppxlib/ppxlib.cmxa /home/tsuy/.opam/default/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/tsuy/.opam/default/lib/base/base_internalhash_types /home/tsuy/.opam/default/lib/base/caml/caml.cmxa /home/tsuy/.opam/default/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/tsuy/.opam/default/lib/base/base.cmxa -I /home/tsuy/.opam/default/lib/base /home/tsuy/.opam/default/lib/ppx_cold/ppx_cold.cmxa /home/tsuy/.opam/default/lib/ppxlib/metaquot_lifters/ppxlib_metaquot_lifters.cmxa /home/tsuy/.opam/default/lib/ppx_sexp_conv/expander/ppx_sexp_conv_expander.cmxa /home/tsuy/.opam/default/lib/ppx_sexp_conv/ppx_sexp_conv.cmxa /home/tsuy/.opam/default/lib/ppx_compare/expander/ppx_compare_expander.cmxa /home/tsuy/.opam/default/lib/ppx_compare/ppx_compare.cmxa /home/tsuy/.opam/default/lib/ppx_enumerate/ppx_enumerate.cmxa /home/tsuy/.opam/default/lib/ppx_hash/expander/ppx_hash_expander.cmxa /home/tsuy/.opam/default/lib/ppx_hash/ppx_hash.cmxa /home/tsuy/.opam/default/lib/ppx_base/ppx_base.cmxa /home/tsuy/.opam/default/lib/ppx_here/expander/ppx_here_expander.cmxa /home/tsuy/.opam/default/lib/ppx_assert/ppx_assert.cmxa /home/tsuy/.opam/default/lib/ppx_inline_test/libname/ppx_inline_test_libname.cmxa /home/tsuy/.opam/default/lib/ppx_bench/ppx_bench.cmxa /home/tsuy/.opam/default/lib/ppx_bin_prot/shape-expander/bin_shape_expand.cmxa /home/tsuy/.opam/default/lib/ppx_bin_prot/ppx_bin_prot.cmxa /home/tsuy/.opam/default/lib/ppx_custom_printf/ppx_custom_printf.cmxa /home/tsuy/.opam/default/lib/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmxa /home/tsuy/.opam/default/lib/ppx_fields_conv/ppx_fields_conv.cmxa /home/tsuy/.opam/default/lib/ppx_fixed_literal/ppx_fixed_literal.cmxa /home/tsuy/.opam/default/lib/ppx_here/ppx_here.cmxa /home/tsuy/.opam/default/lib/ppx_inline_test/ppx_inline_test.cmxa /home/tsuy/.opam/default/lib/ppx_let/expander/ppx_let_expander.cmxa /home/tsuy/.opam/default/lib/ppx_let/ppx_let.cmxa /home/tsuy/.opam/default/lib/ppx_module_timer/ppx_module_timer.cmxa /home/tsuy/.opam/default/lib/ppx_optional/ppx_optional.cmxa /home/tsuy/.opam/default/lib/stdio/stdio.cmxa /home/tsuy/.opam/default/lib/ppx_optcomp/ppx_optcomp.cmxa /home/tsuy/.opam/default/lib/ppx_pipebang/ppx_pipebang.cmxa /home/tsuy/.opam/default/lib/ppx_sexp_message/expander/ppx_sexp_message_expander.cmxa /home/tsuy/.opam/default/lib/ppx_sexp_message/ppx_sexp_message.cmxa /home/tsuy/.opam/default/lib/ppx_sexp_value/ppx_sexp_value.cmxa /home/tsuy/.opam/default/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/tsuy/.opam/default/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/tsuy/.opam/default/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/tsuy/.opam/default/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/tsuy/.opam/default/lib/ppx_string/ppx_string.cmxa /home/tsuy/.opam/default/lib/ppx_typerep_conv/ppx_typerep_conv.cmxa /home/tsuy/.opam/default/lib/ppx_variants_conv/ppx_variants_conv.cmxa /home/tsuy/.opam/default/lib/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmxa /home/tsuy/.opam/default/lib/ppx_jane/kernel/ppx_jane_kernel.cmxa /home/tsuy/.opam/default/lib/ppx_expect/common/expect_test_common.cmxa /home/tsuy/.opam/default/lib/ppx_expect/payload/ppx_expect_payload.cmxa /home/tsuy/.opam/default/lib/ppx_expect/ppx_expect.cmxa /home/tsuy/.opam/default/lib/ppx_log/kernel/ppx_log_kernel.cmxa /home/tsuy/.opam/default/lib/ppx_log/ppx_log.cmxa /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck/expander/ppx_quickcheck_expander.cmxa /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck/ppx_quickcheck.cmxa /home/tsuy/.opam/default/lib/ppx_stable/ppx_stable.cmxa /home/tsuy/.opam/default/lib/ppx_jane/ppx_jane.cmxa .ppx/e9cc17709820d9c10c49ada875fb121c/dune__exe___ppx.cmx)
+$ (cd _build/.sandbox/e50a714f91395bb395c44fc21b6c85f4/default && .ppx/e9cc17709820d9c10c49ada875fb121c/ppx.exe -o bin/main.pp.ml --impl bin/main.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /home/tsuy/.opam/default/lib/base -I /home/tsuy/.opam/default/lib/base/base_internalhash_types -I /home/tsuy/.opam/default/lib/base/caml -I /home/tsuy/.opam/default/lib/base/md5 -I /home/tsuy/.opam/default/lib/base/shadow_stdlib -I /home/tsuy/.opam/default/lib/base_quickcheck -I /home/tsuy/.opam/default/lib/base_quickcheck/ppx_quickcheck/runtime -I /home/tsuy/.opam/default/lib/bin_prot -I /home/tsuy/.opam/default/lib/bin_prot/shape -I /home/tsuy/.opam/default/lib/fieldslib -I /home/tsuy/.opam/default/lib/jane-street-headers -I /home/tsuy/.opam/default/lib/parsexp -I /home/tsuy/.opam/default/lib/ppx_assert/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_bench/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_compare/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_expect/collector -I /home/tsuy/.opam/default/lib/ppx_expect/common -I /home/tsuy/.opam/default/lib/ppx_expect/config -I /home/tsuy/.opam/default/lib/ppx_expect/config_types -I /home/tsuy/.opam/default/lib/ppx_hash/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_here/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_inline_test/config -I /home/tsuy/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/tsuy/.opam/default/lib/ppx_log/types -I /home/tsuy/.opam/default/lib/ppx_module_timer/runtime -I /home/tsuy/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/tsuy/.opam/default/lib/sexplib -I /home/tsuy/.opam/default/lib/sexplib0 -I /home/tsuy/.opam/default/lib/splittable_random -I /home/tsuy/.opam/default/lib/stdio -I /home/tsuy/.opam/default/lib/time_now -I /home/tsuy/.opam/default/lib/typerep -I /home/tsuy/.opam/default/lib/variantslib -I lib/.sat.objs/byte -I lib/.sat.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.pp.ml)
+> File "bin/main.ml", line 27, characters 51-56:
+> 27 |   type t = (Literal.t, Literal.comparator_witness) Set.t [@@deriving sexp]
+>                                                         ^^^^^
+> Error: Unbound value Set.t_of_sexp
+> Hint: Did you mean m__t_of_sexp?
+[2]
