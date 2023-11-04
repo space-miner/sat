@@ -1,6 +1,9 @@
 (executable
  (public_name sat)
  (name main)
+ (flags
+  (-w -32))
+ (modules main assignment clause cnf_formula literal util)
  (libraries sat base stdio)
  (preprocess
   (pps ppx_jane ppx_sexp_conv)))
