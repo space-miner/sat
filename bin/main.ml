@@ -40,8 +40,8 @@ module DPLL : Solver = struct
         (* this feels jank here, assigning and making calls to eliminate *)
         let true_assignment = Assignment.add assignment var true in
         let false_assignment = Assignment.add assignment var false in
-        let true_fml = CNF_Formula.eliminate fml [var] in
-        let false_fml = CNF_Formula.eliminate fml [Literal.neg var] in
+        let true_fml = CNF_Formula.eliminate fml [ var ] in
+        let false_fml = CNF_Formula.eliminate fml [ Literal.neg var ] in
         let true_result = solve true_fml true_assignment in
         (match true_result with
          | Solver_Result.Satisfiable _ -> return true_result
@@ -56,10 +56,10 @@ module DPLL : Solver = struct
 end
 
 let () =
-  let dimacs_string = In_channel.read_all "../test/test002.cnf" in
+  let dimacs_string = In_channel.read_all "../test/uf20-91/uf20-01.cnf" in
   let fml = Util.parse_dimacs dimacs_string in
+  print_s [%sexp (fml : CNF_Formula.t)];
   let assignment = [] in
   let result = DPLL.solve fml assignment in
-  print_s [%sexp (fml : CNF_Formula.t)];
   print_s [%sexp (result : Solver_Result.t)]
 ;;
