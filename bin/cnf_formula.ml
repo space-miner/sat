@@ -1,5 +1,4 @@
 open Base
-open Stdio
 open Assignment
 open Clause
 open Literal
@@ -8,13 +7,15 @@ module CNF_Formula = struct
   module T = struct
     type t = Clause.t list [@@deriving sexp]
 
+    let is_satisfiable fml = List.length fml = 0
+
     (* not sure i want this formula, eliminate literals from fml, where literals is a *)
     (* list of literals *)
     let eliminate fml literals =
       (* we create a new list with the current clause and the literals, if there's a dup *)
       (*  then the clause contains a pure so we can eliminate it *)
       List.filter fml ~f:(fun cls ->
-        List.contains_dup (List.append cls literals) ~compare:Literal.compare)
+        not (List.contains_dup (List.append cls literals) ~compare:Literal.compare))
     ;;
 
     let unit_literals fml =
@@ -38,22 +39,16 @@ module CNF_Formula = struct
 
     let unit_propogation fml assignment =
       let units = unit_literals fml in
-      print_s [%sexp (units : Literal.t list)];
       let assignment' = Assignment.add_literals assignment units in
       let fml' = eliminate fml units in
-      if Assignment.is_consistent assignment'
-      then Ok (assignment', fml')
-      else Error "todo"
+      if Assignment.is_consistent assignment' then fml', assignment' else fml, assignment
     ;;
 
     let pure_literal_elimination fml assignment =
       let pures = pure_literals fml in
-      print_s [%sexp (pures : Literal.t list)];
       let assignment' = Assignment.add_literals assignment pures in
       let fml' = eliminate fml pures in
-      if Assignment.is_consistent assignment'
-      then Ok (assignment', fml')
-      else Error "todo"
+      if Assignment.is_consistent assignment' then fml', assignment' else fml, assignment
     ;;
 
     let choose_variable_opt fml assignment : Literal.t option =
@@ -61,7 +56,6 @@ module CNF_Formula = struct
         let _ =
           List.iter fml ~f:(fun cls ->
             let var_opt = Clause.choose_variable cls assignment in
-            print_s [%sexp (var_opt : int option)];
             match var_opt with
             | Some var -> return (Some var)
             | None -> ())

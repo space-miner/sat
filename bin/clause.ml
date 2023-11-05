@@ -70,5 +70,4 @@ module Clause = struct
 
   include T
   include Comparator.Make (T)
-  include Comparable.Make (T)
 end

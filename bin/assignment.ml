@@ -3,7 +3,7 @@ open Literal
 
 (* might want to turn this into a list with assignments and have clauses be references*)
 module Assignment = struct
-  type t = (int * bool) List.t [@@deriving sexp]
+  type t = (int * bool) list [@@deriving sexp]
 
   let empty = []
   let add assignment var value : t = (var, value) :: assignment
