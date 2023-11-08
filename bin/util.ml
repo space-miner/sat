@@ -1,4 +1,5 @@
 open Base
+open Stdio
 open Cnf_formula
 open Literal
 
@@ -12,7 +13,10 @@ let parse_dimacs (dimacs_string : String.t) : CNF_Formula.t =
     |> String.split_lines (* turn into lines *)
     |> List.map ~f:String.strip (* strip lines of whitespace on left and right *)
     |> List.filter ~f:(fun ln ->
-      (not (String.is_empty ln)) && String.to_list ln |> List.hd_exn |> Char.is_digit)
+      (not (String.is_empty ln))
+      && String.to_list ln
+         |> List.hd_exn
+         |> fun ch -> Char.is_digit ch || Char.( = ) ch '-')
       (* remove comment and problem lines -- those starting with c and p *)
     |> List.map ~f:(fun ln -> String.split_on_chars ln ~on:[ ' '; '\n'; '\r' ])
       (* split each lines on whitespace *)

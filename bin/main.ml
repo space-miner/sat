@@ -56,7 +56,7 @@ module DPLL : Solver = struct
 end
 
 let () =
-  let dimacs_string = In_channel.read_all "../test/uf20-91/uf20-01.cnf" in
+  let dimacs_string = In_channel.read_all "../test/test003.cnf" in
   let fml = Util.parse_dimacs dimacs_string in
   print_s [%sexp (fml : CNF_Formula.t)];
   let assignment = [] in
